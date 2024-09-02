@@ -1,48 +1,33 @@
-#
-# Be sure to run `pod lib lint MyPodExample.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'MyPodExample'
   s.version          = '0.1.0'
   s.summary          = 'A short description of MyPodExample.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+TODO: Add a long description of the pod here.
+Describe what it does, why it was written, and its focus.
+Keep it clear and informative.
+  DESC
 
   s.homepage         = 'https://github.com/jordantangy/MyPodExample'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jordantangy' => 'jordantangy@gmai.com' }
+  s.author           = { 'jordantangy' => 'jordantangy@gmail.com' }
   s.source           = { :git => 'https://github.com/jordantangy/MyPodExample.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform = :osx
-  s.osx.deployment_target = "10.10"
+  s.platform         = :osx
+  s.osx.deployment_target = '10.10'
 
-  s.source_files = 'MyPodExample/Classes/**/*'
-  
-  spec.subspec 'SubComponent' do |subspec|
-    subspec.source_files = 'Sources/SubComponent/**/*.{h,m,swift}'
-    subspec.dependency 'Alamofire'
+  s.source_files     = 'MyPodExample/Classes/**/*'
+
+  # Define a subspec
+  s.subspec 'SubComponent' do |subspec|
+    subspec.source_files = 'MyPodExample/SubComponent/**/*'
+    subspec.dependency 'AFNetworking'  # Add any dependencies specific to this subspec
+    # Optionally specify additional attributes for the subspec
+    # subspec.resources = 'MyPodExample/SubComponent/Assets/*'
   end
 
-  # s.resource_bundles = {
-  #   'MyPodExample' => ['MyPodExample/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'Cocoa'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # Additional configurations can go here if needed
 end
+
+

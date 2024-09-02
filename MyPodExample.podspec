@@ -20,12 +20,12 @@ Keep it clear and informative.
   s.source_files     = 'MyPodExample/Classes/**/*'
 
   # Define a subspec
- # s.subspec 'SubComponent' do |subspec|
-  #  subspec.source_files = 'MyPodExample/SubComponent/**/*'
-   # subspec.dependency 'AFNetworking'  # Add any dependencies specific to this subspec
+  s.subspec 'SubComponent' do |subspec|
+    subspec.source_files = 'MyPodExample/SubComponent/**/*'
+    subspec.dependency 'AFNetworking'  # Add any dependencies specific to this subspec
     # Optionally specify additional attributes for the subspec
     # subspec.resources = 'MyPodExample/SubComponent/Assets/*'
- # end
+  end
 
   # Additional configurations can go here if needed
 end
